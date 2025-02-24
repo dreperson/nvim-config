@@ -36,6 +36,9 @@ return {
     dependencies = { "hrsh7th/cmp-emoji" },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
+      opts.completion = {
+        autocomplete = false,
+      }
       table.insert(opts.sources, { name = "emoji" })
     end,
   },
